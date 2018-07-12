@@ -1,0 +1,26 @@
+<div class="container-fluig login">
+  <div class="logo">
+    <p>
+      <img class="img-responsive" src="http://www.odontoempresas.com.br/nossoodonto/wp-content/uploads/2015/10/Logos-Nosso-Odonto-2.png"
+      />
+    </p>
+  </div>
+  <form [formGroup]="form">
+    <div class="alert alert-danger" role="alert" *ngIf="(!form.controls.email.valid && !form.controls.email.pristine) || (!form.controls.password.valid && !form.controls.password.pristine)">Email e/ou senha inválidos</div>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-user"></i>
+      </span>
+      <input id="email" type="email" class="form-control" name="username" value="" placeholder="email" formControlName="email">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-lock"></i>
+      </span>
+      <input id="password" type="password" class="form-control" name="password" placeholder="senha" formControlName="password">
+    </div>
+    <button (click)="submit()" class="btn btn-lg btn-default btn-block" [disabled]="!form.valid">
+      Entrar</button>
+  </form>
+</div>
+<app-banner></app-banner>
