@@ -14,13 +14,17 @@ import { Routing, RoutingProviders } from './app.routing';
 // Directives
 import { AlertDirective } from './directives/alert.directive';
 
+// Pipes
+import { FilterPipe} from './pipes/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     BannerComponent,
     HomeComponent,
-    AlertDirective
+    AlertDirective,
+    FilterPipe 
   ],
   imports: [
     BrowserModule,

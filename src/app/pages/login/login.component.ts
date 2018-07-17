@@ -24,12 +24,13 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.dataService.createUser(this.form.value)
-      .subscribe(data => {
-        console.log(data);
-      }, error => {
-        console.log("Error occured.");
-      })
+    // this.dataService.createUser(this.form.value)
+    //   .subscribe(data => {
+    //     console.log(data);
+    //   }, error => {
+    //     console.log("Error occured.");
+    //   })
+    console.log(this.form.value);
 
   }
   ngOnInit() {
